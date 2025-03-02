@@ -1,3 +1,7 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,33 +14,46 @@
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@theme {
+  /* Primary Colors */
+  --color-primary-dark: #0A0618;  /* Slightly lighter for better contrast */
+  --color-primary-light: #F5F5F5; /* Softer, less harsh than pure white */
+
+  /* Accent Colors */
+  --color-accent: #5A36F0;         /* A more vivid, less washed-out purple */
+  --color-accent-hover: #6B48FF;
+  --color-accent-active: #4A2ED1;
+
+  /* Text Colors */
+  --color-text-dark: #F5F5F5;      /* Softer than pure white */
+  --color-text-light: #141414;     /* Deeper contrast for better readability */
+
+  /* Surface (Background) Colors */
+  --color-surface-dark: #161022;   /* Richer, deeper dark */
+  --color-surface-light: #FFFFFF;  /* Kept pure white for a fresh feel */
+
+  /* Border Colors */
+  --color-border-dark: #332B44;    /* Less muted, more contrast */
+  --color-border-light: #D0D0D0;   /* Softer than pure white, avoids glare */
+
+  /* Status Colors */
+  --color-status-success: #47C15A;  /* Slightly brighter green */
+  --color-status-error: #E53935;    /* Softer red */
+  --color-status-warning: #FFB020;  /* Warmer yellow */
+  --color-status-info: #2A8FF7;     /* More refined blue */
+
+   /* Button Colors */
+  --color-button-light: #512FEB;    /* Your specified purple tone */
+  --color-button-dark: #6B48FF;     /* Lighter purple for dark mode contrast */
+  --color-button-hover-light: #4023D9; /* Slightly darker for hover in light mode */
+  --color-button-hover-dark: #7E61FF;  /* Slightly lighter for hover in dark mode */
+  --color-button-text-light: #FFFFFF;  /* White text for light mode buttons */
+  --color-button-text-dark: #FFFFFF;   /* White text for dark mode buttons */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer base {
+  * {
+    @apply transition-[background-color,color,border-color] duration-100 ease-in-out;
   }
 }
