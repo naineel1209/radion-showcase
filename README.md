@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Radion-Showcase
 
-## Getting Started
-
-First, run the development server:
+We'll be following the below folder structure for our Next.js project:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+/src
+  ├── /app                # Next.js App Router (server components)
+  │   ├── layout.tsx      # Root layout
+  │   ├── page.tsx        # Main page
+  │   ├── /dashboard      # Example subroute: /dashboard
+  │   │   ├── page.tsx    # Dashboard page
+  │   │   ├── loading.tsx # Loading skeleton
+  │   │   ├── layout.tsx  # Nested layout
+  │   │   ├── error.tsx   # Error boundary
+  │   │   ├── /settings   # Nested route: /dashboard/settings
+  │   │   │   ├── page.tsx
+  │   │   │   ├── layout.tsx
+  │   │   │   ├── loading.tsx
+  │   │   │   ├── error.tsx
+  │   │   └── ...more
+  │   ├── /api            # Server actions / API routes (only in `app/` folder)
+  │   │   ├── /users
+  │   │   │   ├── route.ts # API endpoint: GET, POST, PUT, DELETE
+  │   │   ├── ...more
+  │   ├── globals.css     # Global styles
+  │   ├── favicon.ico     # Site favicon
+  │   ├── not-found.tsx   # 404 Page
+  │   ├── middleware.ts   # Middleware
+  │   └── ...more
+  │
+  ├── /components         # Reusable components (both server & client)
+  │   ├── Button.tsx      # UI Component (Client Component)
+  │   ├── Header.tsx      # Layout Component
+  │   ├── ThemeSwitcher.tsx # Example Client Component
+  │   ├── Sidebar.tsx
+  │   ├── Footer.tsx
+  │   └── ...more
+  │
+  ├── /lib                # Helper functions, API calls, utilities
+  │   ├── db.ts           # Database connection (Prisma, Mongo, etc.)
+  │   ├── auth.ts         # Authentication logic
+  │   ├── api.ts          # API helpers
+  │   ├── constants.ts    # Constant variables
+  │   ├── utils.ts        # Utility functions
+  │   ├── validation.ts   # Zod validation schemas
+  │   └── ...more
+  │
+  ├── /hooks              # Custom React hooks
+  │   ├── useAuth.ts      # Authentication hook
+  │   ├── useTheme.ts     # Theme hook
+  │   ├── useFetch.ts     # Data fetching hook
+  │   └── ...more
+  │
+  ├── /styles             # Styling (Tailwind, SCSS, etc.)
+  │   ├── globals.css     # Global styles
+  │   ├── theme.css       # Theme variables
+  │   ├── components.css  # Component-specific styles (if needed)
+  │   └── ...more
+  │
+  ├── /public             # Static assets (images, fonts, icons)
+  │   ├── /images         # Store images
+  │   │   ├── logo.png
+  │   │   ├── banner.jpg
+  │   │   └── ...more
+  │   ├── robots.txt      # SEO Robots file
+  │   ├── sitemap.xml     # Sitemap
+  │   └── ...more
+  │
+  ├── .env                # Environment variables
+  ├── tsconfig.json       # TypeScript config
+  ├── next.config.js      # Next.js configuration
+  ├── package.json        # Dependencies
+  ├── README.md           # Documentation
+  └── ...more
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

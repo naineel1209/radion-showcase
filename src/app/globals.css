@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Sofia+Sans:wght@500&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -15,6 +16,11 @@
 }
 
 @theme {
+  /* Font Family  */
+  --font-headers-family: 'Outfit', sans-serif;
+  --font-heading-family: 'Sofia Sans', sans-serif;
+  --font-body-family: 'Open Sans', sans-serif;
+
   /* Primary Colors */
   --color-primary-dark: #0A0618;  /* Slightly lighter for better contrast */
   --color-primary-light: #F5F5F5; /* Softer, less harsh than pure white */
