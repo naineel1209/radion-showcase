@@ -17,8 +17,8 @@
 
 @theme {
   /* Font Family  */
-  --font-headers-family: 'Outfit', sans-serif;
   --font-heading-family: 'Sofia Sans', sans-serif;
+  --font-headers-family: 'Outfit', sans-serif;
   --font-body-family: 'Open Sans', sans-serif;
 
   /* Primary Colors */

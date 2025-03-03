@@ -1,6 +1,5 @@
 "use client"
 
-import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -47,6 +46,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <title>Radion | AI Automation Partner</title>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider enableSystem={true} attribute={'class'}>
           {children}
