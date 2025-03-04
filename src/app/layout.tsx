@@ -4,19 +4,8 @@ import CustomCursor from "@/components/CustomCursor";
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
-import { Geist, Geist_Mono } from "next/font/google";
 import { useEffect } from "react";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 function easeOutBack(x: number): number {
   const c1 = 1.70158;
@@ -48,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <title>Radion | AI Automation Partner</title>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`text-primary-text-light dark:text-primary-text-dark`}>
         <CustomCursor />
         <ThemeProvider enableSystem={true} attribute={'class'}>
           {children}
