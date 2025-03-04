@@ -1,12 +1,12 @@
 "use client"
 
+import CustomCursor from "@/components/CustomCursor";
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
+import { useEffect } from "react";
 import "./globals.css";
-import Lenis from 'lenis';
-import { useEffect, useState } from "react";
-import 'lenis/dist/lenis.css';
-import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
