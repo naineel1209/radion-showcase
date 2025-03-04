@@ -24,7 +24,7 @@ const HeroSection = () => {
         // it should be triggered when the user scrolls to the hero section
         whileInView={{ translateY: 0, opacity: 1 }}
 
-        ref={heroSectionRef} className={' border-2 flex flex-col items-center justify-center w-[100%] h-[100%]'}>
+        ref={heroSectionRef} className={'flex flex-col items-center justify-center w-[100%] h-[100%]'}>
         <div className='rounded-md p-1 bg-primary-dark/10 dark:bg-primary-light/10'>
           <div className='transition-all duration-200 flex justify-center items-center gap-3 text-sm md:text-md group hover:mx-2 cursor-pointer p-[0.2rem]'>
             <Image src={LogoSvg} alt='Vercel Logo' width={10} height={10} className='group-hover:scale-[107%]' />

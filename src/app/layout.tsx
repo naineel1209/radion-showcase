@@ -4,8 +4,9 @@ import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Lenis from 'lenis';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import 'lenis/dist/lenis.css';
+import CustomCursor from "@/components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,12 +43,13 @@ export default function RootLayout({
     }
 
     requestAnimationFrame(raf);
-  })
+  }, []);
 
   return (
     <html lang="en" suppressHydrationWarning>
       <title>Radion | AI Automation Partner</title>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <CustomCursor />
         <ThemeProvider enableSystem={true} attribute={'class'}>
           {children}
         </ThemeProvider>
