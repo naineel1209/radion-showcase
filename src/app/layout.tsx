@@ -5,7 +5,7 @@ import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
-import "./globals.css";
+import "@/app/globals.css";
 
 function easeOutBack(x: number): number {
   const c1 = 1.70158;
@@ -19,7 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   useEffect(() => {
     const lenis = new Lenis({
       smoothWheel: true,

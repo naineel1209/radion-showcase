@@ -11,6 +11,9 @@
   "dependencies": {
     "@geist-ui/icons": "^1.0.2",
     "@tailwindcss/postcss": "^4.0.9",
+    "@tsparticles/engine": "^3.8.1",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "lenis": "^1.1.22",
     "motion": "^12.4.10",
     "next": "15.2.0",
