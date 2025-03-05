@@ -11,12 +11,15 @@ import {
   type Container, ISourceOptions, MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
+import { useTheme } from 'next-themes';
 
 
 const HeroSection = () => {
   const heroSectionRef = useRef(null)
 
   const [init, setInit] = useState(false);
+
+  const { theme } = useTheme()
 
   useEffect(() => {
     // Load particles and set init to true after initialization
@@ -25,7 +28,7 @@ const HeroSection = () => {
     }).then(() => {
       setInit(true);
     })
-  }, []);
+  }, [theme]);
 
   const particlesLoaded = async (container?: Container | undefined): Promise<void> => {
     console.log('Particles loaded' + container);
@@ -38,7 +41,7 @@ const HeroSection = () => {
     },
     background: {
       color: {
-        value: "#000000",
+        value: (theme === 'dark') ? "#ffffff" : "#000000",
       },
       opacity: 0,
     },
@@ -66,10 +69,10 @@ const HeroSection = () => {
     },
     particles: {
       color: {
-        value: "#ffffff",
+        value: (theme === 'dark') ? "#ffffff" : "#000000",
       },
       links: {
-        color: "#ffffff",
+        color: (theme === 'dark') ? "#ffffff" : "#000000",
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -102,7 +105,7 @@ const HeroSection = () => {
       },
     },
     detectRetina: true,
-  }), []);
+  }), [theme]);
 
   return (<>
     <div id="home_heroSection" className='w-full h-[80%] relative'>
@@ -133,7 +136,7 @@ const HeroSection = () => {
 
         ref={heroSectionRef} className={'flex flex-col items-center justify-center w-[100%] h-[100%]'}>
         <div className='rounded-md p-1 bg-primary-dark/10 dark:bg-primary-light/10'>
-          <SectionSubHeader />
+          <SectionSubHeader text="Radion | AI Automation Partner" />
         </div>
         <h1 className='select-none text-text-light dark:text-text-dark font-headers-family font-bold text-[3.2rem] tracking-[0.03em] text-center leading-tight my-2'>Transform workflows with AI <br /> powered automation</h1>
         <span className='text-text-light dark:text-text-dark font-headers-family font-light text-[1.2rem] tracking-[0.03em] text-center my-4'>

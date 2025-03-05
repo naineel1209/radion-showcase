@@ -5,8 +5,8 @@ const CustomCursor = () => {
   const [yPos, setYPos] = useState(0);
 
   const move = (e: MouseEvent) => {
-    setXPos(e.clientX);
-    setYPos(e.clientY);
+    setXPos(e.pageX);
+    setYPos(e.pageY);
   }
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const CustomCursor = () => {
   })
 
   return (
-    <div className='hidden md:block w-[30px] h-[30px] absolute top-0 left-0 z-1001 border-accent border-2 bg-transparent rounded-full translate-x-[-50%] translate-y-[-50%]' style={{
+    <div className='pointer-events-none hidden md:block w-[30px] h-[30px] absolute top-0 left-0 z-1001 border-accent border-2 bg-transparent rounded-full translate-x-[-50%] translate-y-[-50%]' style={{
       transform: `translate(${xPos}px, ${yPos}px)`,
       transition: 'transform 20ms ease'
     }}>
