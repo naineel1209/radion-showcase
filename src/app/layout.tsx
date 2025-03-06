@@ -1,11 +1,11 @@
 "use client"
 
+import "@/app/globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
-import "@/app/globals.css";
 
 function easeOutBack(x: number): number {
   const c1 = 1.70158;
@@ -38,7 +38,7 @@ export default function RootLayout({
       <title>Radion | AI Automation Partner</title>
       <body className={`text-primary-text-light dark:text-primary-text-dark`}>
         <CustomCursor />
-        <ThemeProvider enableSystem={true} attribute={'class'}>
+        <ThemeProvider defaultTheme="dark" attribute={'class'}>
           {children}
         </ThemeProvider>
       </body>

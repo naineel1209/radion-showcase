@@ -1,28 +1,37 @@
-import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 const CustomCursor = () => {
-  const [xPos, setXPos] = useState(0);
-  const [yPos, setYPos] = useState(0);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   const move = (e: MouseEvent) => {
-    setXPos(e.pageX);
-    setYPos(e.pageY);
+    setMousePosition({
+      x: e.clientX,
+      y: e.clientY
+    });
   }
 
   useEffect(() => {
     window.addEventListener('mousemove', move);
-
     return () => {
       window.removeEventListener('mousemove', move);
     }
-  })
+  }, []);
 
   return (
-    <div className='pointer-events-none hidden md:block w-[30px] h-[30px] absolute top-0 left-0 z-1001 border-accent border-2 bg-transparent rounded-full translate-x-[-50%] translate-y-[-50%]' style={{
-      transform: `translate(${xPos}px, ${yPos}px)`,
-      transition: 'transform 20ms ease'
-    }}>
-    </div>
+    <motion.div
+      className='pointer-events-none hidden md:block w-[30px] h-[30px] fixed top-0 left-0 z-1001 border-accent border-2 bg-transparent rounded-full'
+      animate={{
+        x: mousePosition.x - 15, // Offset by half the width
+        y: mousePosition.y - 15  // Offset by half the height
+      }}
+      transition={{
+        type: "spring",
+        damping: 15,
+        stiffness: 150,
+        mass: 0.1
+      }}
+    />
   )
 }
 
