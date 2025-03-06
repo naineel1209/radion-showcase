@@ -2,6 +2,8 @@
 
 import "@/app/globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
@@ -39,7 +41,9 @@ export default function RootLayout({
       <body className={`text-primary-text-light dark:text-primary-text-dark`}>
         <CustomCursor />
         <ThemeProvider defaultTheme="dark" attribute={'class'}>
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

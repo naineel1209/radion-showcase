@@ -60,11 +60,13 @@ const PageSections = () => {
 
 const Header = () => {
   return (
-    <div className='sticky md:top-[1.5rem] md:w-[60%] w-[60%] mx-auto top-0 z-500 bg-primary-light dark:bg-primary-dark backdrop-blur-md'>
-      <div className='border-1 rounded-lg flex items-center justify-between md:gap-[5rem] bg-primary-dark/10 dark:bg-primary-light/10 backdrop-blur-md p-2'>
-        <ImageHeadingContainer />
-        <PageSections />
-        <ThemeChanger />
+    <div className='fixed top-0 w-full z-500 md:top-[1.5rem]'>
+      <div className='md:w-[60%] w-[100%] mx-auto top-0 z-500 bg-primary-light dark:bg-primary-dark backdrop-blur-md'>
+        <div className='border-1 rounded-lg flex items-center justify-between md:gap-[5rem] bg-primary-dark/10 dark:bg-primary-light/10 backdrop-blur-md p-2'>
+          <ImageHeadingContainer />
+          <PageSections />
+          <ThemeChanger />
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import SectionSubHeader from '@/components/SectionSubHeader';
-import { Activity } from '@geist-ui/icons';
+import { Activity, BarChart, CheckboxFill, FileLambdaFill, FullScreenClose } from '@geist-ui/icons';
 import { motion } from 'motion/react';
 import { useRef } from 'react';
 import ProcessCards from './ProcessCards';
@@ -10,9 +10,8 @@ const ProcessSection = () => {
   const processSectionRef = useRef(null)
 
   return (
-    <div className='bg-primary-light dark:bg-primary-dark py-[3rem]'>
+    <div className='bg-primary-light dark:bg-primary-dark md:pt-[8rem] md:pb-[6rem] py-[5rem]'>
       <motion.div
-
         //    requoired for animations of the DOM elements
         initial={{ opacity: 0, translateY: 30 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -55,7 +54,7 @@ const ProcessSection = () => {
           </motion.div>
         </div>
 
-        <div className="w-[90%] mt-8">
+        <div className="w-[70%] mt-8">
           {/* First row - 3 equal cards */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-4">
             <ProcessCards
@@ -65,12 +64,12 @@ const ProcessSection = () => {
               leftTerminal={true}
             />
             <ProcessCards
-              icon={<Activity />}
+              icon={<BarChart />}
               title="Planning"
               subtitle="Creating detailed roadmaps and strategies while identifying key milestones and potential challenges ahead."
             />
             <ProcessCards
-              icon={<Activity />}
+              icon={<CheckboxFill />}
               title="Execution"
               subtitle="Transforming plans into reality with careful attention to detail and continuous communication throughout development."
               rightTerminal={true}
@@ -80,13 +79,13 @@ const ProcessSection = () => {
           {/* Second row - 2 cards at 50% width */}
           <div className="grid grid-cols-2 gap-4">
             <ProcessCards
-              icon={<Activity />}
+              icon={<FileLambdaFill />}
               title="Testing"
               subtitle="Rigorous quality assurance and testing procedures to ensure everything works flawlessly and meets requirements."
               leftTerminal={true}
             />
             <ProcessCards
-              icon={<Activity />}
+              icon={<FullScreenClose />}
               title="Delivery"
               subtitle="Final deployment and handover with comprehensive documentation and support to ensure long-term success."
               rightTerminal={true}

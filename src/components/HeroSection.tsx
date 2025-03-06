@@ -108,7 +108,7 @@ const HeroSection = () => {
   }), [theme]);
 
   return (<>
-    <div id="home_heroSection" className='w-full h-[80%] relative'>
+    <div id="home_heroSection" className='w-full h-full relative'>
       {
         init && <Particles
           id='home_heroSection_particles'

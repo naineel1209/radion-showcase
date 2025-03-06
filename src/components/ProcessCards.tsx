@@ -1,5 +1,5 @@
-import { motion } from 'motion/react'
 import React, { PropsWithChildren } from 'react'
+import { motion } from 'motion/react'
 
 interface ProcessCardsProps extends PropsWithChildren {
   icon: React.ReactNode,
@@ -37,7 +37,7 @@ const ProcessCards = ({ icon, title, subtitle, leftTerminal, rightTerminal }: Pr
         drop-shadow-2xl'>
         {icon}
       </div>
-      <div className='pt-4 text-text-dark/90'>
+      <div className='pt-4 text-neutral-100'>
         <h3 className='font-bold text-2xl'>{title}</h3>
         <p className='text-md text-justify pt-1 text-neutral-500'>{subtitle}</p>
       </div>
