@@ -1,17 +1,16 @@
 "use client"
 
-import React from 'react'
-import { useRef } from 'react'
-import { motion } from 'motion/react';
 import SectionSubHeader from '@/components/SectionSubHeader';
+import { Activity } from '@geist-ui/icons';
+import { motion } from 'motion/react';
+import { useRef } from 'react';
 import ProcessCards from './ProcessCards';
-import { Activity } from '@geist-ui/icons'
 
 const ProcessSection = () => {
   const processSectionRef = useRef(null)
 
   return (
-    <div className='w-[100%] h-[100%] bg-primary-light dark:bg-primary-dark py-[3rem]'>
+    <div className='bg-primary-light dark:bg-primary-dark py-[3rem]'>
       <motion.div
 
         //    requoired for animations of the DOM elements

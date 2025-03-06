@@ -28,7 +28,7 @@ const ProcessCards = ({ icon, title, subtitle, leftTerminal, rightTerminal }: Pr
       transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
       viewport={{ once: true, amount: 0.5 }}
       whileInView={whileInView}
-      className='rounded-lg p-[1rem] bg-neutral-950 relative'
+      className='rounded-lg p-[1rem] bg-neutral-900 relative'
     >
       <div className='absolute top-0 right-0 w-[20%] h-[20%] bg-button-dark dark:bg-button-dark rounded-md opacity-20 blur-xl bg-gradient-to-r from-transparent'></div>
 
@@ -37,9 +37,9 @@ const ProcessCards = ({ icon, title, subtitle, leftTerminal, rightTerminal }: Pr
         drop-shadow-2xl'>
         {icon}
       </div>
-      <div className='pt-4 text-text-dark'>
+      <div className='pt-4 text-text-dark/90'>
         <h3 className='font-bold text-2xl'>{title}</h3>
-        <p className='text-md text-justify pt-1'>{subtitle}</p>
+        <p className='text-md text-justify pt-1 text-neutral-500'>{subtitle}</p>
       </div>
     </motion.div>
   )

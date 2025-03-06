@@ -1,14 +1,14 @@
 "use client"
 
-import React, { useRef } from 'react'
-import { motion } from 'motion/react';
 import SectionSubHeader from '@/components/SectionSubHeader';
+import { motion } from 'motion/react';
+import { useRef } from 'react';
 
 const WhoWeAreSection = () => {
   const whoWeAreSectionRef = useRef(null)
 
   return (
-    <div className='w-[100%] h-[100%] border-2bg-primary-light dark:bg-primary-dark py-[3rem]'>
+    <div className='bg-primary-light dark:bg-primary-dark py-[3rem]'>
       <motion.div
 
         //    requoired for animations of the DOM elements
