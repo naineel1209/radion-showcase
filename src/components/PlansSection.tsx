@@ -1,10 +1,10 @@
 "use client";
 
+import { Activity, BarChart, CheckboxFill } from '@geist-ui/icons';
 import { motion } from 'motion/react';
-import React, { useRef, useState } from 'react'
-import SectionSubHeader from './SectionSubHeader';
+import { useRef, useState } from 'react';
 import PlansBox from './PlansBox';
-import { Activity, BarChart, CheckboxFill, FileLambdaFill, FullScreenClose } from '@geist-ui/icons';
+import SectionSubHeader from './SectionSubHeader';
 
 const PlansSection = () => {
   const plansSectionRef = useRef(null)

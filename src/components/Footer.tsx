@@ -1,12 +1,12 @@
 "use client";
 
+import { Github, Linkedin, Mail, Twitter } from '@geist-ui/icons';
 import { motion } from 'framer-motion';
-import { Mail, Twitter, Github, Linkedin } from '@geist-ui/icons';
 import SectionSubHeader from './SectionSubHeader';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-dark dark:bg-neutral-950 text-text-light dark:text-text-dark">
+    <footer className="bg-primary-dark dark:bg-neutral-950 dark:text-text-light text-text-dark">
       <div className="max-w-7xl mx-auto py-[5rem] px-[5%]">
         <motion.div
           initial={{ opacity: 0, translateY: 30 }}
@@ -87,7 +87,7 @@ const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <div className="text-text-secondary dark:text-text-secondary-dark text-sm">
-            © {new Date().getFullYear()} Your Company. All rights reserved.
+            © {new Date().getFullYear()} Radion For AI. All rights reserved.
           </div>
 
           <div className="flex gap-6">

@@ -1,17 +1,16 @@
 "use client";
 
-import React, { useRef } from 'react'
-import ActionButton from '@/components/ActionButton'
-import { motion } from 'motion/react'
+import ActionButton from '@/components/ActionButton';
 import SectionSubHeader from '@/components/SectionSubHeader';
-import { loadSlim } from "@tsparticles/slim";
-import { useEffect, useState, useMemo } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
   type Container, ISourceOptions, MoveDirection,
   OutMode,
 } from "@tsparticles/engine";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim";
+import { motion } from 'motion/react';
 import { useTheme } from 'next-themes';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import LogoShowcase from './LogoShowcase';
 
 
@@ -150,6 +149,9 @@ const HeroSection = () => {
           <button className='cursor-pointer rounded-md p-2 bg-primary-dark/10 dark:bg-primary-light/10' onClick={() => console.log('Learn More clicked')}>
             Learn More
           </button>
+        </div>
+        <div className='rounded-md p-1 bg-primary-dark/10 dark:bg-primary-light/10 mt-[3rem]'>
+          <SectionSubHeader text="Trusted by" />
         </div>
         <LogoShowcase />
       </motion.div>

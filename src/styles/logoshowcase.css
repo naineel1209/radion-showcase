@@ -1,0 +1,29 @@
+.scroller {
+    overflow: hidden;
+    user-select: none;
+
+    --gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    width: 100%;
+}
+
+.scroller > ul {
+    list-style: none;
+    min-width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
