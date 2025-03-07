@@ -12,6 +12,7 @@ import {
   OutMode,
 } from "@tsparticles/engine";
 import { useTheme } from 'next-themes';
+import LogoShowcase from './LogoShowcase';
 
 
 const HeroSection = () => {
@@ -150,6 +151,7 @@ const HeroSection = () => {
             Learn More
           </button>
         </div>
+        <LogoShowcase />
       </motion.div>
     </div >
   </>
