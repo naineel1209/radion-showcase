@@ -10,7 +10,7 @@ const ProcessSection = () => {
   const processSectionRef = useRef(null)
 
   return (
-    <div className='bg-primary-light dark:bg-primary-dark md:pt-[8rem] md:pb-[6rem] py-[5rem]'>
+    <div className='bg-primary-light dark:bg-primary-dark py-[5rem] md:pt-[8rem] md:pb-[6rem]'>
       <motion.div
         //    requoired for animations of the DOM elements
         initial={{ opacity: 0, translateY: 30 }}

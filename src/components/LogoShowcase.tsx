@@ -29,7 +29,7 @@ const LogoShowcase = () => {
   ]
 
   return (
-    <div className='relative w-[20%] flex flex-col items-center justify-center gap-[2rem] py-[1rem]'>
+    <div className='relative w-[30%] flex flex-col items-center justify-center gap-[2rem] py-[1rem]'>
       <div className='absolute left-0 z-501 w-[6%] h-full bg-primary-light dark:bg-primary-dark bg-gradient-to-r to-transparent backdrop-blur-md' style={{ maskImage: 'linear-gradient(to right, black, transparent)', WebkitMaskImage: 'linear-gradient(to right, black, transparent)' }} />
       <div className='absolute right-0 z-501 w-[6%] h-full bg-primary-light dark:bg-primary-dark bg-gradient-to-l from-transparent backdrop-blur-md' style={{ maskImage: 'linear-gradient(to left, black, transparent)', WebkitMaskImage: 'linear-gradient(to left, black, transparent)' }} />
       <div className='scroller'>

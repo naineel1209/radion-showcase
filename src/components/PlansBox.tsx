@@ -44,7 +44,7 @@ const PlansBox = ({ icon, name, pricePerMonth, description, features, leftTermin
         </div>
       </div>
       <div>
-        <div className='text-5xl font-bold text-text-light dark:text-text-dark pt-4'>
+        <div className='text-5xl font-bold text-text-dark pt-4'>
           ${pricePerMonth}
           <span className='text-lg text-neutral-500 dark:text-neutral-400
         font-normal align-top'> / month</span>

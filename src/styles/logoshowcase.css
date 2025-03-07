@@ -13,11 +13,12 @@
 .scroller > ul {
     list-style: none;
     min-width: 100%;
-
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: var(--gap);
+    padding-inline: calc(var(--gap));
 
     animation: scroll 10s linear infinite;
 }

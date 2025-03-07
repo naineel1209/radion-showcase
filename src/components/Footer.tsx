@@ -6,7 +6,7 @@ import SectionSubHeader from './SectionSubHeader';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary-dark dark:bg-neutral-950 dark:text-text-light text-text-dark">
+    <footer className="bg-primary-dark dark:bg-neutral-950 text-text-dark">
       <div className="max-w-7xl mx-auto py-[5rem] px-[5%]">
         <motion.div
           initial={{ opacity: 0, translateY: 30 }}
