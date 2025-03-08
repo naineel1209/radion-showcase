@@ -20,7 +20,14 @@
     gap: var(--gap);
     padding-inline: calc(var(--gap));
 
-    animation: scroll 10s linear infinite;
+    --duration: 10s;
+    animation: scroll var(--duration) linear infinite;
+
+    transition: animation-duration 1s;
+}
+
+.scroller:hover > ul {
+    animation-play-state: paused;
 }
 
 @keyframes scroll {

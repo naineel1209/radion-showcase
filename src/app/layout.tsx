@@ -8,6 +8,7 @@ import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { ThemeProvider } from "next-themes";
 import { useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function easeOutBack(x: number): number {
   const c1 = 1.70158;
@@ -43,6 +44,7 @@ export default function RootLayout({
         <ThemeProvider defaultTheme="dark" attribute={'class'}>
           <Header />
           {children}
+          <SpeedInsights />
           <Footer />
         </ThemeProvider>
       </body>

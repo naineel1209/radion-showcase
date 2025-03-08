@@ -10,7 +10,9 @@ const ProcessSection = () => {
   const processSectionRef = useRef(null)
 
   return (
-    <div className='bg-primary-light dark:bg-primary-dark py-[5rem] md:pt-[8rem] md:pb-[6rem]'>
+    <div
+      id='process'
+      className='bg-primary-light dark:bg-primary-dark py-[5rem] md:pt-[8rem] md:pb-[6rem]'>
       <motion.div
         //    requoired for animations of the DOM elements
         initial={{ opacity: 0, translateY: 30 }}
@@ -22,7 +24,9 @@ const ProcessSection = () => {
         whileInView={{ translateY: 0, opacity: 1 }}
 
         ref={processSectionRef}
-        className={'flex flex-col items-center justify-center w-[100%] h-[100%]'}>
+        className={'flex flex-col items-center justify-center w-[100%] h-[100%] relative'}>
+        <div className="absolute top-[0] left-[50%] w-[30%] h-[100%] bg-button-dark dark:bg-button-dark rounded-md opacity-[30%] blur-3xl bg-gradient-to-r from-transparent -translate-x-1/2 rotate-45" >
+        </div >
         <div className='rounded-md p-1 bg-primary-dark/10 dark:bg-primary-light/10'>
           <SectionSubHeader text="Process" />
         </div>

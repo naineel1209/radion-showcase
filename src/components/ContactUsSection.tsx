@@ -8,13 +8,16 @@ import { Mail, PhoneCall, MapPin } from '@geist-ui/icons'
 const ContactUsSection = () => {
   return (
     <div
-      className='bg-primary-light dark:bg-primary-dark py-[5rem] md:pt-[8rem] md:pb-[6rem]'>
+      id='contact'
+      className='bg-primary-light dark:bg-primary-dark py-[5rem] md:pt-[8rem] md:pb-[8rem]'>
       <motion.div
         initial={{ opacity: 0, translateY: 30 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.6 }}
         whileInView={{ translateY: 0, opacity: 1 }}
+        className='relative'
       >
+        <div className="absolute top-[0] left-[50%] w-[30%] h-[100%] bg-button-dark dark:bg-button-dark rounded-md dark:opacity-[10%] opacity-[30%] blur-3xl bg-gradient-to-r from-transparent -translate-x-1/2 rotate-45" ></div>
         <div className='flex flex-col items-center justify-center w-[100%] h-[100%]'>
           <div className='rounded-md p-1 bg-primary-dark/10 dark:bg-primary-light/10'>
             <SectionSubHeader text="Connect With Us" />

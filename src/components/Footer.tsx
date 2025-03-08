@@ -61,7 +61,7 @@ const Footer = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="bg-transparent border-2 border-primary-light/20 dark:border-primary-dark/20 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent-active"
+                  className="bg-transparent border-2 border-primary-light/20 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-accent-active"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}

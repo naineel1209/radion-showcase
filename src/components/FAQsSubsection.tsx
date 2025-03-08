@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'motion/react'
 
 interface FAQsSubsectionProps {
   question: string,
@@ -13,20 +14,27 @@ const FAQsSubsection = ({ question, answer }: FAQsSubsectionProps) => {
   };
 
   return (
-    <div className="faq-item border-b border-gray-200">
+    <div className="border-b border-gray-200 overflow-hidden">
       <div
-        className="faq-question flex justify-between items-center cursor-pointer py-4"
+        className="flex flex-col items-start cursor-pointer py-4"
         onClick={toggleAnswer}
       >
-        <span className="text-lg font-medium">{question}</span>
-        <span className="text-xl">{isOpen ? '▲' : '▼'}</span>
-      </div>
-      <div
-        className={`faq-answer overflow-hidden transition-max-height duration-300 ease-in-out ${isOpen ? 'max-h-40' : 'max-h-0'}`}
-      >
-        <div className="py-2">
-          {answer}
+        <div className="flex justify-between w-full">
+          <span className="text-lg font-medium">{question}</span>
+          <span className="text-xl">{isOpen ? '▲' : '▼'}</span>
         </div>
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className=""
+        >
+          <div className="text-md text-neutral-500 dark:text-neutral-400 mt-4">
+            {
+              answer
+            }
+          </div>
+        </motion.div>
       </div>
     </div>
   )
